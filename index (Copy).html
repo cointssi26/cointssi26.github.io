@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COINTSSI 2026</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+
+    body{
+      font-family:"Segoe UI",Arial,sans-serif;
+      background:#f4f7fb;
+      color:#1f2937;
+      line-height:1.6;
+    }
+
+    header{
+      min-height:100vh;
+      background:
+        linear-gradient(rgba(15,23,42,.85),rgba(30,58,138,.85)),
+        /*url("https://images.unsplash.com/photo-1519389950473-47ba0277781c");*/
+        url("img/bg5.jpeg");
+
+      background-size:cover;
+      background-position:center;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:30px;
+    }
+
+    .hero{
+      max-width:900px;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      margin-bottom:15px;
+    }
+
+    .hero h2{
+      font-size:1.5rem;
+      font-weight:400;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:1.1rem;
+      margin-bottom:25px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:#facc15;
+      color:#1e293b;
+      padding:12px 24px;
+      border-radius:30px;
+      font-weight:bold;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#0d49cb;
+      color:white;
+      padding:14px 28px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      margin:8px;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:#3b66dd;
+      transform:translateY(-3px);
+      color:#fff;
+
+    }
+
+    .btn.secondary{
+      background:white;
+      color:#1e3a8a;
+    }
+
+    .btn.ins{
+      background: rgb(226, 159, 3);
+      color:#000;
+    }
+
+    .btn.news{
+      background:#076b27;
+      color:#fff;
+    }
+
+    nav{
+      background:white;
+      padding:15px;
+      text-align:center;
+      box-shadow:0 2px 8px rgba(0,0,0,.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    nav a{
+      color:#1e3a8a;
+      text-decoration:none;
+      margin:0 12px;
+      font-weight:600;
+      font-size:.95rem;
+    }
+
+    nav a:hover{color:#2563eb}
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:50px 20px;
+    }
+
+    section{
+      background:white;
+      padding:40px;
+      margin-bottom:30px;
+      border-radius:18px;
+      box-shadow:0 4px 18px rgba(0,0,0,.07);
+    }
+
+    section h2{
+      color:#1e3a8a;
+      font-size:2rem;
+      margin-bottom:20px;
+      border-left:6px solid #2563eb;
+      padding-left:15px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:20px;
+      margin-top:25px;
+    }
+
+    .card{
+      background:#eff6ff;
+      padding:25px;
+      border-radius:16px;
+      border-left:5px solid #2563eb;
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 8px 20px rgba(0,0,0,.12);
+    }
+
+    .card h3{
+      color:#1e40af;
+      margin-bottom:10px;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:20px;
+      text-align:center;
+    }
+
+    .stat{
+      background:linear-gradient(135deg,#2563eb,#1e40af);
+      color:white;
+      padding:30px 15px;
+      border-radius:18px;
+    }
+
+    .stat h3{
+      font-size:2.3rem;
+      margin-bottom:5px;
+    }
+
+    ul{
+      margin-left:22px;
+      margin-top:12px;
+    }
+
+    li{
+      margin-bottom:8px;
+    }
+
+    .schedule{
+      overflow-x:auto;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:20px;
+      min-width:780px;
+    }
+
+    th{
+      background:#1e3a8a;
+      color:white;
+      padding:14px;
+    }
+
+    td{
+      border:1px solid #dbeafe;
+      padding:13px;
+      text-align:center;
+    }
+
+    tr:nth-child(even){
+      background:#f8fafc;
+    }
+
+    .highlight{
+      background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+      color:white;
+      text-align:center;
+    }
+
+    .highlight h2{
+      color:white;
+      border-left:none;
+      padding-left:0;
+    }
+
+    .contact{
+      background:#f8fafc;
+      padding:25px;
+      border-radius:14px;
+      margin-top:15px;
+    }
+
+    footer{
+      background:#0f172a;
+      color:white;
+      text-align:center;
+      padding:35px 20px;
+    }
+
+    @media(max-width:700px){
+      .hero h1{font-size:2rem}
+      .hero h2{font-size:1.1rem}
+      section{padding:25px}
+      nav a{display:inline-block;margin:6px}
+    }
+  </style>
+  <style>
+    .ponente-card{
+      /*max-width:900px;*/
+      /*margin:40px auto;*/
+      padding:30px;
+      display:flex;
+      gap:30px;
+      align-items:center;
+      background:#021b37;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.15);
+      font-family:Arial, sans-serif;
+    }
+
+    .foto-ponente{
+      max-width:220px;
+      max-height:220px;
+      min-width:220px;
+      min-height:220px;
+      object-fit:cover;
+      border-radius:50%;
+      border:6px solid #003b73;
+    }
+
+    .contenido h1{
+      font-size:22px;
+      color:#ffffff;
+      margin-bottom:15px;
+    }
+
+    .contenido h3{
+      color:#005fa3;
+      margin-top:15px;
+    }
+
+    .contenido p{
+      font-size:16px;
+      line-height:1.6;
+      color:#fff;
+    }
+
+    .tema{
+      /*font-weight:bold;*/
+      color:#111;
+
+    }
+
+    @media(max-width:700px){
+      .ponente-card{
+        flex-direction:column;
+        text-align:center;
+      }
+    }
+  </style>
+  
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="badge">30 de junio al 02 de julio de 2026</div>
+    <h1>COINTSSI 2026</h1>
+    <h2>III Congreso Internacional de Tecnologías de Software y Sistemas</h2>
+    <p>
+      Un espacio académico y científico para compartir avances en ingeniería de software,
+      inteligencia artificial, ciencia de datos, sistemas de información y tecnologías emergentes.
+    </p>
+    <a href="#cronograma" class="btn">Ver Cronograma</a>
+    <a href="https://forms.gle/iTUWodUaQ1vcXzhT6" target="_blank" class="btn ins">Inscripciones</a>
+    <!--<a href="#contacto" class="btn secondary">Contacto</a>-->
+    <a href="#concurso" class="btn news">I Concurso de Programación</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#presentacion">Presentación</a>
+  <a href="#objetivo">Objetivo</a>
+  <a href="#temas">Temas</a>  
+  <a href="#ponencias">Ponencias</a>
+  <a href="#participantes">Participantes</a>
+  <a href="#cronograma">Cronograma</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container">
+
+<section id="presentacion">
+  <h2>Presentación</h2>
+  <p>
+    El <strong>III Congreso Internacional de Tecnologías de Software y Sistemas
+    (COINTSSI 2026)</strong> es un evento académico y científico organizado por la
+    Escuela Profesional de Ingeniería de Software y Sistemas de la Universidad Nacional
+    de Juliaca, en el marco de la Semana de la Ingeniería de Software y Sistemas 2026.
+  </p>
+  <p>
+    El congreso constituye un espacio internacional de intercambio de conocimientos,
+    experiencias y avances científicos en áreas relacionadas con la Ingeniería de Software,
+    Ciencias de la Computación, Sistemas de Información y Tecnologías Emergentes.
+  </p>
+</section>
+
+<section>
+  <div class="stats">
+    <div class="stat">
+      <h3>3</h3>
+      <p>Días académicos</p>
+    </div>
+    <div class="stat">
+      <h3>10</h3>
+      <p>Ponencias magistrales</p>
+    </div>
+    <div class="stat">
+      <h3>7</h3>
+      <p>Talleres especializados</p>
+    </div>
+    <div class="stat">
+      <h3>1</h3>
+      <p>Concurso de programación</p>
+    </div>
+  </div>
+</section>
+
+<section id="objetivo">
+  <h2>Objetivo del Congreso</h2>
+  <p>
+    Promover el intercambio de conocimientos científicos, tecnológicos y profesionales
+    mediante la participación de especialistas nacionales e internacionales, contribuyendo
+    al fortalecimiento de la investigación, la innovación y la formación académica en el
+    ámbito de la Ingeniería de Software y Sistemas.
+  </p>
+</section>
+
+<section id="temas">
+  <h2>Ejes Temáticos</h2>
+  <div class="grid">
+    <div class="card"><h3>Inteligencia Artificial</h3><p>Modelos inteligentes, aprendizaje profundo y aplicaciones actuales.</p></div>
+    <div class="card"><h3>Machine Learning</h3><p>Aprendizaje automático aplicado a problemas reales.</p></div>
+    <div class="card"><h3>Ciencia de Datos</h3><p>Analítica avanzada, visualización y toma de decisiones basada en datos.</p></div>
+    <div class="card"><h3>Ingeniería de Software</h3><p>Procesos, metodologías, calidad y desarrollo de software.</p></div>
+    <div class="card"><h3>Ciberseguridad</h3><p>Seguridad informática, protección de datos y gestión de riesgos.</p></div>
+    <div class="card"><h3>Computación en la Nube</h3><p>Servicios cloud, arquitecturas escalables y transformación digital.</p></div>
+    <div class="card"><h3>IoT</h3><p>Internet de las Cosas y sistemas inteligentes conectados.</p></div>
+    <div class="card"><h3>DevOps y MLOps</h3><p>Automatización, despliegue continuo y operación de modelos.</p></div>
+  </div>
+</section>
+
+<section id="participantes">
+  <h2>Dirigido a</h2>
+  <ul>
+    <li>Estudiantes de pregrado y posgrado.</li>
+    <li>Docentes universitarios.</li>
+    <li>Investigadores nacionales e internacionales.</li>
+    <li>Profesionales del sector tecnológico.</li>
+    <li>Comunidad académica interesada en innovación tecnológica.</li>
+  </ul>
+</section>
+
+<section class="highlight">
+  <h2>Relevancia Académica</h2>
+  <p>
+    COINTSSI 2026 representa una de las principales iniciativas académicas y científicas
+    de la región sur del Perú para la promoción de la investigación, la innovación y el
+    desarrollo tecnológico, fortaleciendo la cooperación entre academia, industria y sociedad.
+  </p>
+</section>
+
+<section id="cronograma">
+  <h2>Cronograma General</h2>
+  <div id="calendar"></div>
+  <script src="lib.js"></script>
+</section>
+
+<section id="ponencias">
+  <h2>Ponencias</h2>
+
+  <div id="idpivar">
+    <section class="ponente-card">
+      <img src="img/ivar.jpeg" class="foto-ponente">
+      <div class="contenido">
+        <h1>Ivar Vargas Belizario</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Graphs from Features: Tree-Based Graph Layout for Feature Analysis
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Ivar Vargas Belizario es Doctor (PhD) y Magíster (MSc) en Ciencia de la Computación por la Universidad de São Paulo (Brasil), con tres estancias posdoctorales en Ciencia de la Computación. Es profesor e investigador en las áreas de visión por computadora, procesamiento de imágenes, imágenes médicas, aprendizaje automático, aprendizaje profundo, redes complejas y ciencia de datos. Ha publicado en revistas y conferencias científicas internacionales de alto impacto, desarrollando soluciones innovadoras basadas en inteligencia artificial para diversos dominios de aplicación.
+        </p>
+        <p>
+          ivar@alumni.usp.br
+        </p>
+        <p>
+          ORCID:
+          <a style="color: #0096a4;" href="https://orcid.org/0000-0001-5970-2283" target="_blank">
+            https://orcid.org/0000-0001-5970-2283
+          </a>
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="http://lattes.cnpq.br/7221568202094697" target="_blank">
+            http://lattes.cnpq.br/7221568202094697
+          </a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div id="idpmilwart">
+    <section class="ponente-card">
+      <img src="img/milwart.jpeg" class="foto-ponente">
+      <div class="contenido">
+        <h1>Milwart Calizaya Bobadila</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Inteligencia Artificial Aplicada a la Industria: Casos Reales
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Ingeniero de Sistemas por la Universidad Nacional del Altiplano, con maestría en Informática por la Universidad Nacional de San Agustín. A lo largo de su trayectoria académica, se ha desempeñado como expositor en congresos nacionales e internacionales, abordando temas de vanguardia como videoanalítica, inteligencia artificial, seguridad informática y computación en la nube. Actualmente, se desempeña como Ingeniero de Inteligencia Artificial en SumatoID (Argentina), donde explica su experiencia desarrollando proyectos en distintas industrias.
+        </p>
+        <p>
+          mcalizaya@sumatoid.com
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+        </p>
+
+      </div>
+    </section>
+  </div>  
+
+
+  <div id="idpliz">
+    <section class="ponente-card">
+      <img src="img/liz.jpeg" class="foto-ponente">
+      <div class="contenido">
+        <h1>Liz Maribel Huancapaza Hilasaca</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Inteligencia Artificial Aplicada al Análisis de Paisajes Sonoros (Soundscape)
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Actualmente es candidata a doctora en Ciencia de la Computación en el Programa de Posgrado en Matemática Aplicada y Ciencia de la Computación del Instituto de Ciencias Matemáticas y de Computación de la Universidad de São Paulo (ICMC-USP), programa con calificación CAPES 7. Obtuvo el grado de magíster en Ciencia de la Computación (2020) en la misma institución. Asimismo, se desempeña como revisora activa de artículos científicos en revistas y conferencias internacionales de reconocido prestigio, incluyendo publicaciones indexadas por organizaciones como IEEE y Elsevier. Sus líneas de investigación se centran en inteligencia artificial, visualización, clasificación y predicción de datos multidimensionales, minería y procesamiento de sonidos e imágenes, con aplicaciones en ecología, medio ambiente y paisaje acústico.
+        </p>
+        <p>
+          lizhh@usp.br
+        </p>
+        <p>
+          ORCID:
+          <a style="color: #0096a4;" href="https://orcid.org/0000-0002-0345-2075 " target="_blank">
+            https://orcid.org/0000-0002-0345-2075 
+          </a>
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="http://lattes.cnpq.br/8396643250450869" target="_blank">
+            http://lattes.cnpq.br/8396643250450869
+          </a>
+        </p>
+
+
+      </div>
+    </section>
+  </div>
+
+  <div id="idpdiego">
+    <section class="ponente-card">
+      <img src="img/diego.jpg" alt="Foto de la ponente" class="foto-ponente"
+      >
+      <div class="contenido">
+        <h1>Diego Carvalho do Nascimento</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Causality Between Retail Demand and Consumers' Behavior: An Overview of Complex Time Series and its visualization in a Real Case Study.
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Diego Carvalho do Nascimento es Profesor e Investigador en NEOMA Business School (Francia) y posee un PhD en Estadística. Su investigación se centra en aprendizaje estadístico y automático, modelado de datos, análisis espacio-temporal y visualización de datos. Ha publicado en revistas científicas de alto impacto, como Royal Statistical Society (Applied Statistics) y Pattern Recognition, y participa activamente en proyectos de investigación aplicada en colaboración con la industria.
+        </p>
+        <p>
+          diego.nascimento@neoma-bs.fr
+        </p>
+        <p>
+          ORCID:
+          <a style="color: #0096a4;" href="https://orcid.org/0000-0002-3406-4518" target="_blank">
+            https://orcid.org/0000-0002-3406-4518
+          </a>
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="https://neoma-bs.com/professors/nascimento-diego" target="_blank">
+            https://neoma-bs.com/professors/nascimento-diego
+          </a>
+        </p>
+
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+  <div id="idpcalderon">
+    <section class="ponente-card">
+      <img src="img/guillermo.jpg" class="foto-ponente">
+      <div class="contenido">
+        <h1>Guillermo Calderón Ruiz</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Process mining: oportunidades en industria y academia
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+Es docente de la Universidad Católica de Santa María (Arequipa, Perú) desde 1998. Es Doctor en Ciencias de la Ingeniería, Área Ciencia de la Computación, y Magíster en Ingeniería por la Pontificia Universidad Católica de Chile. Asimismo, obtuvo el grado de Magíster en Ingeniería de Sistemas y los títulos de Bachiller e Ingeniero de Sistemas en la Universidad Católica de Santa María. Su experiencia académica se centra en las áreas de Gestión de Procesos de Negocio (BPM), Minería de Procesos, Inteligencia de Negocios, Bases de Datos, Minería de Datos y Tecnologías de la Información. Sus actividades de docencia e investigación están orientadas al análisis y mejora de procesos organizacionales mediante el uso de técnicas avanzadas de gestión y análisis de datos.
+        </p>
+        <p>
+          gcalderon@ucsm.edu.pe
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=10998" target="_blank">
+            https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=10998
+          </a>
+        </p>
+
+      </div>
+    </section>
+  </div>
+  
+  
+  <div id="idpjean">
+    <section class="ponente-card">
+      <img src="img/jean.jpg" class="foto-ponente">
+      <div class="contenido">
+        <h1>Jean Roger Farfan Gavancho</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          WaykiBot, un robot open source
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Ingeniero en Sistemas Computacionales por la Universidad Autónoma de Guadalajara – Mexico, con Doctorado en Ingeniería de Sistemas y Abogado. Con certificación internacional en Java Programmer y Java Developer por Sun Microsystem. Desarrollando proyectos basados en Impresión 3D, robot open Source,  soluciones basados en IA para diferentes aplicaciones dentro de entorno de robot Humanoide y actualmente investigando y desarrollando el proyecto WaykiBot.
+        </p>
+        <p>
+          jfarfan@unaj.edu.pe
+        </p>
+        <p>
+          ORCID:
+          <a style="color: #0096a4;" href="https://orcid.org/0000-0001-9224-6419" target="_blank">
+            https://orcid.org/0000-0001-9224-6419
+          </a>
+        </p>
+        <p>
+          Página web:
+        </p>
+
+      </div>
+    </section>
+  </div>  
+
+
+  <div id="idpirma">
+    <section class="ponente-card">
+      <img src="img/irma.jpeg" class="foto-ponente"
+      >
+      <div class="contenido">
+        <h1>Irma de Jesus Miguel Garzon</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          La Inteligencia Artificial, una aliada en tu aprendizaje
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Coordinadora de la Academia de Computación Avanzada de la Ingeniería en Tecnología de Software, del Centro de Enseñanza Técnica Industrial. 
+Datos académicos  Licenciatura en Ciencias de la Computación  
+Lugar de estudios: Escuela de Ciencias Físico Matemáticas de la Universidad Autónoma de Puebla  
+Maestría en Ingeniería eléctrica con especialidad en computación.  
+Lugar de estudios:  Centro de Investigación y de Estudios Avanzados del IPN  Doctorado en ciencias en física educativa  Lugar de estudios:  Centro de Investigación en Ciencia Aplicada y Tecnología Avanzada del Instituto Politécnico Nacional Experiencia Docente Ha impartido cursos de nivel Bachillerato, Ingeniería y Maestría en la UNAM, el IPN, la Universidad ITESO (la Universidad Jesuita de Guadalajara), la Universidad Politécnica de Puebla, entre otras instituciones educativas.
+
+
+        </p>
+        <p>
+          ingeniería.its@ceti.mx
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="https://mx.linkedin.com/in/irma-de-jes%C3%BAs-miguel-garz%C3%B3n-51ba8776" target="_blank">
+            https://www.linkedin.com/in/irma-de-jes%C3%BAs-miguel-garz%C3%B3n-51ba8776/
+          </a>
+        </p>
+        
+      </div>
+    </section>
+  </div>
+
+  
+
+  <div id="idpramirez">
+    <section class="ponente-card">
+      <img src="img/merling.jpeg" class="foto-ponente">
+      <div class="contenido">
+        <h1>Merling Josué Ramírez Yugra</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          La Inteligencia Artificial en el desarrollo de software: cómo está cambiando la forma de programar
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Desarrollador Full Stack con más de 8 años de experiencia en el desarrollo de software y más de 6 años de trayectoria profesional participando en proyectos tecnológicos para organizaciones nacionales e internacionales. A lo largo de su carrera ha contribuido en el análisis, diseño, desarrollo, implementación y mantenimiento de soluciones informáticas orientadas a mejorar procesos institucionales y empresariales. 
+        </p>
+        <p>
+          ramirezjry17@gmail.com
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="https://www.linkedin.com/in/erika-zuñiga-7a68a785/" target="_blank">
+            https://www.linkedin.com/in/erika-zuñiga-7a68a785/
+          </a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <div id="idperika">
+    <section class="ponente-card">
+      <img src="img/erika.jpeg" class="foto-ponente">
+      <div class="contenido">
+        <h1>Erika Zuniga-Violante</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Innovación interdisciplinaria
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Líder académica e investigadora con amplia experiencia, doctora en Ciencias Ambientales y Desarrollo Sostenible, magíster en Gestión de Ecosistemas y con formación en Ingeniería Química. Cuenta con más de 20 años de experiencia docente y una extensa trayectoria en cargos administrativos dentro de la educación superior, incluyendo la coordinación de investigación y el aseguramiento de la calidad. Posee competencias en análisis de datos institucionales, gestión de proyectos y procesos de acreditación. Es autora de publicaciones en revistas científicas arbitradas y participa activamente en redes de investigación académica. Mantiene un firme compromiso con la toma de decisiones basada en datos y la mejora continua, en concordancia con la misión y los valores institucionales. 
+        </p>
+        <p>
+          Zunigae@andrews.edu
+        </p>
+        <p>
+          ORCID:
+          <a style="color: #0096a4;" href="#" target="_blank">
+            https://orcid.org/0000-0000-0000-0000
+          </a>
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="#" target="_blank">
+            https://paginaweb.com
+          </a>
+        </p>
+
+      </div>
+    </section>
+  </div>
+
+
+  <div id="idpzapata">
+    <section class="ponente-card">
+      <img src="img/ManuelAlcantara.jpeg" class="foto-ponente">
+      <div class="contenido">
+        <h1>Manuel David Alcantara Zapata</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Inteligencia Artificial Generativa y RAG: Cómo funcionan los asistentes inteligentes modernos
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Manuel David Alcántara es AI Solution Engineer en IBM y cuenta con una maestría en Data Science e Inteligencia Artificial. Posee más de diez años de experiencia en inteligencia artificial, ciencia de datos, machine learning, analítica de negocio, QA y gestión de pruebas. Ha liderado soluciones innovadoras para clientes, integrando NLP, visualización de datos y tecnologías emergentes. Además, cuenta con certificaciones en IBM Cloud Pak for Data, MLOps y CBAP®.
+        </p>
+        <p>
+          manu.mdc.upc2020@gmail.com
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="https://www.linkedin.com/in/manuel-david-alcantara/" target="_blank">
+            https://www.linkedin.com/in/manuel-david-alcantara/
+          </a>
+        </p>
+
+      </div>
+    </section>
+  </div>  
+
+
+</section>
+
+
+<section id="talleres">  
+  <h2>Talleres</h2>
+  <div id="idptaller1">
+    <section class="ponente-card">
+      <img src="https://w7.pngwing.com/pngs/141/425/png-transparent-user-profile-computer-icons-avatar-profile-s-free-angle-rectangle-profile-cliparts-free-thumbnail.png" class="foto-ponente">
+      <div class="contenido">
+        <h1>Taller 1: Eder Gutierrez Quispe</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Taller de Modelado, Optimización y Simulación con Python
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          ...
+        </p>
+        <p>
+          egutierrezq.doc@unaj.edu.pe
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+        </p>
+      </div>
+    </section>
+  </div>  
+			
+  <div id="idptaller2">
+    <section class="ponente-card">
+      <img src="https://w7.pngwing.com/pngs/141/425/png-transparent-user-profile-computer-icons-avatar-profile-s-free-angle-rectangle-profile-cliparts-free-thumbnail.png" class="foto-ponente">
+      <div class="contenido">
+        <h1>Taller 2: Noe Wilber Tipo Mamani</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Microfrontends: Arquitectura y Skills Profesionales
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Ingeniero de Sistemas (UPeU) y Magíster en Informática (UNA-Puno), especializado en arquitectura de software y microservicios. Actualmente se desempeña como Senior Software Developer en NTT DATA Europe & Latam, Desarrollador Full Stack en EsSalud, Ingeniero de Software en Interbank y Consultor de TI en la UNMSM.
+        </p>
+        <p>
+          ntipomam@emeal.nttdata.com
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+        </p>
+      </div>
+    </section>
+  </div>  
+
+		
+  <div id="idptaller3">
+    <section class="ponente-card">
+      <img src="https://w7.pngwing.com/pngs/141/425/png-transparent-user-profile-computer-icons-avatar-profile-s-free-angle-rectangle-profile-cliparts-free-thumbnail.png" class="foto-ponente">
+      <div class="contenido">
+        <h1>Taller 3: Rudy Jhean Rojas Pari</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Tomando decisiones con datos: El poder de la Inteligencia de Negocios
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          ...
+        </p>
+        <p>
+          rjrojasp.doc@unaj.edu.pe
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+        </p>
+      </div>
+    </section>
+  </div>  
+
+
+  <div id="idptaller4">
+    <section class="ponente-card">
+      <img src="https://w7.pngwing.com/pngs/141/425/png-transparent-user-profile-computer-icons-avatar-profile-s-free-angle-rectangle-profile-cliparts-free-thumbnail.png" class="foto-ponente">
+      <div class="contenido">
+        <h1>Taller 4: Roel Dante Gómez Apaza</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          NETWORKING, el motor invisble de crecimiento profesional
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Ingeniero de Sistemas con una sólida trayectoria en la gestión de proyectos tecnológicos y participación activa en iniciativas de emprendimiento. Con experiencia en liderar equipos multidisciplinarios y aplicar soluciones innovadoras para alcanzar objetivos estratégicos. Experto en el diseño UX | UI, implementación de sistemas concurrentes , así como en la implementación de metodologías ágiles para optimizar procesos y ofrecer soluciones de alta calidad. Experiencia en la dirección de proyectos, desde la planificación hasta la puesta en producción y entrega exitosa.
+        </p>
+        <p>
+          rdgomeza.doc@unaj.edu.pe
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+          <a style="color: #0096a4;" href="https://pe.linkedin.com/in/roel-dante-gomez-874955a2" target="_blank">
+            https://pe.linkedin.com/in/roel-dante-gomez-874955a2
+          </a>
+        </p>
+      </div>
+    </section>
+  </div>  
+
+  <div id="idptaller5">
+    <section class="ponente-card">
+      <img src="https://w7.pngwing.com/pngs/141/425/png-transparent-user-profile-computer-icons-avatar-profile-s-free-angle-rectangle-profile-cliparts-free-thumbnail.png" class="foto-ponente">
+      <div class="contenido">
+        <h1>Taller 5: Edy Larico Mamani</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          ...
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          ...
+        </p>
+        <p>
+          e.laricom@unaj.edu.pe
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+        </p>
+      </div>
+    </section>
+  </div>  
+
+			
+  <div id="idptaller6">
+    <section class="ponente-card">
+      <img src="https://w7.pngwing.com/pngs/141/425/png-transparent-user-profile-computer-icons-avatar-profile-s-free-angle-rectangle-profile-cliparts-free-thumbnail.png" class="foto-ponente">
+      <div class="contenido">
+        <h1>Taller 6: Leibnihtz Abrahan Ayamamani Choque</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Transformación digital en telecomunicaciones: análisis del apagado 3G y refarming 4G mediante datos abiertos de OSIPTEL
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          Ingeniero de telecomunicaciones con más de 10 años de experiencia en diseño, implementación, integración y optimización de redes móviles multi-tecnología y multi-vendor. Experto en redes móviles y NaaS, con dominio de planificación radio, simulaciones, análisis de KPIs y optimización. Manejo herramientas como ASSET Radio, Atoll, MAE, ENM, iSSTAR y Moshell, aplicando automatización y ciencia de datos para soluciones eficientes.
+        </p>
+        <p>
+          abrahan@leibtechs.pe
+        </p>
+        <p>
+          ORCID:
+        </p>
+        <p>
+          Página web:
+
+          <a style="color: #0096a4;" href="https://www.linkedin.com/in/leibnihtz/" target="_blank">
+            https://www.linkedin.com/in/leibnihtz/
+          </a>          
+        </p>
+      </div>
+    </section>
+  </div>  
+
+
+
+  <div id="idptaller7">
+    <section class="ponente-card">
+      <img src="https://w7.pngwing.com/pngs/141/425/png-transparent-user-profile-computer-icons-avatar-profile-s-free-angle-rectangle-profile-cliparts-free-thumbnail.png" class="foto-ponente">
+      <div class="contenido">
+        <h1>Taller 7: Juan Carlos Pinto Larico</h1>
+        <h3>Tema</h3>
+        <p class="tema">
+          Ventajas de los Procedimientos Amacenados en desarrollo de Software
+        </p>
+
+        <h3>Short Bio</h3>
+        <p>
+          ...
+        </p>
+        <p>
+          jcpintol.doc@unaj.edu.pe
+        </p>
+        <p>
+          ORCID:
+          <a style="color: #0096a4;" href="https://orcid.org/0000-0003-3550-5183" target="_blank">
+            https://orcid.org/0000-0003-3550-5183
+          </a>
+        </p>
+        <p>
+          Página web:
+        </p>
+      </div>
+    </section>
+  </div>  
+
+
+</section>
+
+
+
+
+
+<section id="concurso">
+  <h2>I Concurso de Programación</h2>
+  <div class="contact">
+    <p>
+      Bases del Concurso e Inscripciones: <a href="https://docs.google.com/document/d/1I7-ZulMA3TGUWc4ghhsU7brTdJu0t56Y3mE2O0BmPps/edit?usp=sharing" target="_blank">BASES Y FORMULARIO DE INSCRIPCIÓN HABILITADO.
+    </a>
+
+    </p>
+  </div>
+</section>
+
+<!--
+<section id="comites">
+  <h2>Comité Organizador</h2>
+  <B>Comité Central</B>
+  <ul> 
+    <li>Dr. Edy Larico Mamani</li>
+    <li>Dr. Jean Roger Farfan Gavancho</li>
+    <li>Mg. Roel Dante Gómez Apaza</li>
+    <li>Mg. Samuel Quispe Mamani</li>
+    <li>Mg. Max Alí Jara Paredes</li>
+    <li>Mg. Juan Carlos Pinto Larico</li>
+  </ul> 
+  <B>Comité Académico de Ponencias</B>
+  <ul> 
+    <li>Dr. Ivar Vargas Belizario</li>
+    <li>Dr. Jean Roger Farfan Gavancho</li>
+    <li>Mg. Roel Dante Gómez Apaza</li>
+    <li>Dr. Néstor Tipula Quispe</li>
+    <li>Dr. Juan Carlos Herrera Miranda</li>
+    <li>Mg. Wilson Cruz Mamani</li>
+    <li>Mg Eder Gutiérrez Quispe</li>
+    <li>Mg. Noé Wilber Tipo Mamani</li>
+    <li>Mg. Liz Maribel Huancapaza Hilasaca</li>
+    <li>Mg. Juan Carlos Pinto Larico</li>
+    <li>Mg. Leibnihtz Abrahan Ayamamani Choque</li>
+  </ul>
+</section>
+-->
+
+<section id="contacto">
+  <h2>Información de Contacto</h2>
+  <div class="contact">
+    <p><strong>Comité Organizador – COINTSSI 2026</strong></p>
+    <p>Escuela Profesional de Ingeniería de Software y Sistemas</p>
+    <p>Universidad Nacional de Juliaca</p>
+    <p>Juliaca – Perú</p>
+  </div>
+</section>
+
+
+</div>
+
+<footer>
+  <p><strong>III Congreso Internacional de Tecnologías de Software y Sistemas</strong></p>
+  <p>COINTSSI 2026 | Universidad Nacional de Juliaca</p>
+  <p>Juliaca – Perú | 2026</p>
+</footer>
+
+</body>
+</html>

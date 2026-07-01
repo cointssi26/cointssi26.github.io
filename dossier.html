@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dossier para Ponentes | COINTSSI 2026</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+    }
+
+    header h2 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #facc15;
+      color: #1e293b;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #1e3a8a;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 28px;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    }
+
+    section h2 {
+      color: #1e3a8a;
+      margin-bottom: 18px;
+      font-size: 1.7rem;
+      border-left: 6px solid #2563eb;
+      padding-left: 14px;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #eff6ff;
+      padding: 22px;
+      border-radius: 14px;
+      border-left: 5px solid #2563eb;
+    }
+
+    .card h3 {
+      color: #1e40af;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      margin-left: 22px;
+      margin-top: 12px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .schedule {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      min-width: 780px;
+    }
+
+    th {
+      background: #1e3a8a;
+      color: white;
+      padding: 14px;
+      text-align: center;
+    }
+
+    td {
+      padding: 13px;
+      border: 1px solid #dbeafe;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .note {
+      background: #fff7ed;
+      border-left: 6px solid #f97316;
+      padding: 18px;
+      border-radius: 12px;
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      text-align: center;
+    }
+
+    .highlight h2 {
+      color: white;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header h2 {
+        font-size: 1.1rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      section {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Dossier Informativo para Ponentes</h1>
+    <h2>III Congreso Internacional de Tecnologías de Software y Sistemas</h2>
+    <p><strong>COINTSSI 2026</strong></p>
+    <p>Universidad Nacional de Juliaca | Juliaca - Perú</p>
+    <div class="badge">30 de junio al 02 de julio de 2026</div>
+  </header>
+
+  <nav>
+    <a href="#presentacion">Presentación</a>
+    <a href="#informacion">Información</a>
+    <a href="#temas">Temas</a>
+    <a href="#modalidad">Ponencias</a>
+    <a href="#cronograma">Cronograma</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="presentacion">
+      <h2>Presentación</h2>
+      <p class="intro">
+        Estimado(a) Ponente Invitado(a):
+      </p>
+      <p>
+        La Comisión Organizadora del <strong>III Congreso Internacional de Tecnologías de Software y Sistemas
+        (COINTSSI 2026)</strong> expresa su agradecimiento por aceptar participar como conferencista en nuestro
+        evento académico y científico.
+      </p>
+      <p>
+        El presente dossier tiene como finalidad brindarle información general sobre los objetivos, alcance temático,
+        modalidad de participación y relevancia académica del congreso, con el propósito de facilitar la planificación
+        y desarrollo de su ponencia.
+      </p>
+      <p>
+        Su participación constituye una valiosa contribución para el fortalecimiento de la formación académica,
+        la investigación científica y la innovación tecnológica de estudiantes, docentes e investigadores.
+      </p>
+    </section>
+
+    <section id="informacion">
+      <h2>Información General del Congreso</h2>
+      <p>
+        El <strong>COINTSSI 2026</strong> es un evento académico y científico organizado por la
+        Escuela Profesional de Ingeniería de Software y Sistemas de la Universidad Nacional de Juliaca,
+        en el marco de la Semana de la Ingeniería de Software y Sistemas 2026.
+      </p>
+      <p>
+        El congreso constituye un espacio internacional de intercambio de conocimientos, experiencias y avances
+        científicos en Ingeniería de Software, Ciencias de la Computación, Sistemas de Información y Tecnologías
+        Emergentes.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Institución</h3>
+          <p>Universidad Nacional de Juliaca</p>
+        </div>
+        <div class="card">
+          <h3>Escuela</h3>
+          <p>Ingeniería de Software y Sistemas</p>
+        </div>
+        <div class="card">
+          <h3>Lugar</h3>
+          <p>Juliaca - Perú</p>
+        </div>
+        <div class="card">
+          <h3>Fechas</h3>
+          <p>30 de junio al 02 de julio de 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Objetivo del Congreso</h2>
+      <p>
+        Promover el intercambio de conocimientos científicos, tecnológicos y profesionales mediante la participación
+        de especialistas nacionales e internacionales, contribuyendo al fortalecimiento de la investigación,
+        la innovación y la formación académica en el ámbito de la Ingeniería de Software y Sistemas.
+      </p>
+    </section>
+
+    <section id="temas">
+      <h2>Alcance Temático</h2>
+      <p>Las ponencias magistrales estarán orientadas a temas de actualidad y relevancia científica, entre ellos:</p>
+
+      <div class="grid">
+        <div class="card">Inteligencia Artificial</div>
+        <div class="card">Machine Learning</div>
+        <div class="card">Ciencia de Datos</div>
+        <div class="card">Ingeniería de Software</div>
+        <div class="card">Arquitectura de Software</div>
+        <div class="card">Computación en la Nube</div>
+        <div class="card">Internet de las Cosas</div>
+        <div class="card">Ciberseguridad</div>
+        <div class="card">DevOps y MLOps</div>
+        <div class="card">Transformación Digital</div>
+        <div class="card">Innovación Tecnológica</div>
+        <div class="card">Tecnologías Emergentes</div>
+      </div>
+    </section>
+
+    <section id="modalidad">
+      <h2>Modalidad de las Ponencias</h2>
+      <p>
+        Las ponencias magistrales se desarrollarán en modalidad <strong>presencial y virtual</strong>,
+        permitiendo la participación de especialistas nacionales e internacionales.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>40 minutos</h3>
+          <p>Exposición magistral del tema.</p>
+        </div>
+        <div class="card">
+          <h3>15 minutos</h3>
+          <p>Preguntas, discusión e interacción con los asistentes.</p>
+        </div>
+        <div class="card">
+          <h3>55 minutos</h3>
+          <p>Duración total de cada ponencia.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Perfil de los Participantes</h2>
+      <ul>
+        <li>Estudiantes de pregrado y posgrado.</li>
+        <li>Docentes universitarios.</li>
+        <li>Investigadores.</li>
+        <li>Profesionales del sector tecnológico.</li>
+        <li>Comunidad académica interesada en investigación e innovación tecnológica.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Relevancia Académica y Científica</h2>
+      <p>
+        COINTSSI 2026 representa una de las principales iniciativas académicas y científicas de la región sur del Perú
+        para la promoción de la investigación, la innovación y el desarrollo tecnológico.
+      </p>
+      <p>
+        El evento reúne a especialistas de reconocida trayectoria nacional e internacional con el propósito de compartir
+        avances científicos, experiencias profesionales, resultados de investigación y tendencias tecnológicas que están
+        transformando la industria y la academia.
+      </p>
+      <p>
+        Asimismo, el congreso busca promover la vinculación entre academia, industria y sociedad, favoreciendo la
+        generación de soluciones innovadoras para los desafíos actuales de la transformación digital.
+      </p>
+    </section>
+
+    <section>
+      <h2>Certificación y Reconocimiento</h2>
+      <ul>
+        <li>Certificado oficial de Ponente Internacional o Nacional.</li>
+        <li>Reconocimiento institucional otorgado por la Universidad Nacional de Juliaca.</li>
+        <li>Difusión de su participación en los medios oficiales del evento y de la universidad.</li>
+      </ul>
+    </section>
+
+    <section class="highlight">
+      <h2>Proyección Institucional</h2>
+      <p>
+        COINTSSI 2026 aspira a consolidarse como un referente académico y científico en el sur del Perú y la región
+        andina, promoviendo la cooperación internacional, la investigación aplicada y la innovación tecnológica como
+        pilares para el desarrollo sostenible de la sociedad digital.
+      </p>
+    </section>
+
+    <section id="cronograma">
+      <h2>Cronograma General del III COINTSSI 2026</h2>
+
+      <div class="schedule">
+        <table>
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Martes 30 de junio</th>
+              <th>Miércoles 01 de julio</th>
+              <th>Jueves 02 de julio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>07:30 – 08:30</td>
+              <td>Registro de participantes</td>
+              <td>Registro de asistencia</td>
+              <td>Registro de asistencia</td>
+            </tr>
+            <tr>
+              <td>08:15 – 09:00</td>
+              <td>Inauguración del Congreso</td>
+              <td>Ponencia 4</td>
+              <td>Ponencia 8</td>
+            </tr>
+            <tr>
+              <td>09:00 – 10:00</td>
+              <td>Ponencia 1</td>
+              <td>Ponencia 5</td>
+              <td>Ponencia 9</td>
+            </tr>
+            <tr>
+              <td>10:00 – 11:00</td>
+              <td>Ponencia 2</td>
+              <td>Ponencia 6</td>
+              <td>Ponencia 10</td>
+            </tr>
+            <tr>
+              <td>11:00 – 12:00</td>
+              <td>Ponencia 3</td>
+              <td>Ponencia 7</td>
+              <td>Clausura</td>
+            </tr>
+            <tr>
+              <td>12:00 – 13:30</td>
+              <td>Almuerzo</td>
+              <td>Almuerzo</td>
+              <td>Almuerzo</td>
+            </tr>
+            <tr>
+              <td>13:30 – 14:00</td>
+              <td>Registro de asistencia</td>
+              <td>Registro de asistencia</td>
+              <td>Registro de asistencia</td>
+            </tr>
+            <tr>
+              <td>14:00 – 15:00</td>
+              <td>Taller 1</td>
+              <td>Primer concurso de programación</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>15:00 – 16:00</td>
+              <td>Taller 2</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>16:00 – 17:00</td>
+              <td>Taller 3</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <strong>Nota:</strong> Las ponencias magistrales se desarrollarán en modalidad presencial y/o virtual según la
+        disponibilidad del ponente invitado. Cada ponencia tendrá una duración total de 55 minutos: 40 minutos de
+        exposición y 15 minutos para preguntas y discusión académica.
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Información de Contacto</h2>
+      <p><strong>Comisión Organizadora – COINTSSI 2026</strong></p>
+      <p>Escuela Profesional de Ingeniería de Software y Sistemas</p>
+      <p>Universidad Nacional de Juliaca</p>
+      <p>Juliaca – Perú</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p><strong>III Congreso Internacional de Tecnologías de Software y Sistemas</strong></p>
+    <p>COINTSSI 2026 | Universidad Nacional de Juliaca</p>
+    <p>© 2026 - Juliaca, Perú</p>
+  </footer>
+
+</body>
+</html>
